@@ -183,3 +183,12 @@ require_once ASTRA_THEME_DIR . 'inc/core/markup/class-astra-markup.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
+
+/**
+ * Custom message after "Add to Cart" button.
+ */
+function custom_message_after_add_to_cart() {
+    echo '<p class="custom-message">Thank you for shopping with us!</p>';
+}
+add_action( 'woocommerce_after_add_to_cart_button', 'custom_message_after_add_to_cart' );
+
